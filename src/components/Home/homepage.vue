@@ -2,7 +2,7 @@
     <div>
      <nav>
         <P>@TESTIE</P>
-        <router-link to="/home">Home</router-link>
+        <router-link to="/home" :class="{Home:isHome}">Home</router-link>
         <router-link to="">Dashboard</router-link>
         <router-link to="/home/test" >Test</router-link>
         <form action="">
@@ -38,7 +38,8 @@ export default{
     data()
     {
         return{
-             show:true
+             show:true,
+             isHome:true
         }
     },
     computed:{
@@ -47,12 +48,13 @@ export default{
     },
     watch:{
         $route(to){
-            console.log(to);
         if(to.path==="/home" || to.path==="/home/profile")
         {
             this.show=true
+        
         }
         else{
+            this.isHome=false
             this.show=false
         }
             
@@ -154,6 +156,10 @@ input[type="search"]:focus{
     flex:6;
    
 
+}
+.Home
+{
+    color:blue 
 }
 a:hover
 {
