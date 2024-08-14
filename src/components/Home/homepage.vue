@@ -8,7 +8,8 @@
         <form action="">
             <input type="search">
             <input type="submit" value="search">
-        </form>        
+        </form>     
+        <p @click="themeChange">{{ theme }}   </p>
           <router-link to="/home/profile" id="profile-router"><img src="@/assets/blueprofile.jpg" alt=""></router-link>
 
      </nav>
@@ -39,7 +40,20 @@ export default{
     {
         return{
              show:true,
-             isHome:true
+             isHome:true,
+             theme:"Dark"
+        }
+    },
+    methods:{
+        themeChange()
+        {
+            if(this.theme==="Dark")
+        {
+            this.theme="Bright"
+        }
+        else{
+            this.theme="Dark"
+        }
         }
     },
     computed:{
@@ -89,17 +103,20 @@ img{
     border-radius: 50%;
 }
 nav{
+
     color:white;
     /* background-color:rgba(0, 29, 72, 0.9); */
-    background-color: rgba(11, 11, 11, 0.85); 
+    background-color: rgba(0, 0, 0, 0.85); 
     border-bottom:4px solid rgba(249, 249, 249, 0.2);
     padding: 16px;
     display: flex;
+    width:100%;
     justify-content: space-between;
 }
 nav form{
     flex:4;
     margin:0px auto;
+   
 }
 nav p
 {
@@ -161,15 +178,40 @@ input[type="search"]:focus{
 {
     color:blue 
 }
-a:hover
+a:hover,p:hover
 {
     color:blue
 }
-a:focus
+a:focus,p:focus
 {
     color:blue
 }
 
-
+@media only screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+      
+    }
+    
+    nav form {
+        width: 100%;
+        position: relative;
+        left:100px;
+      
+    }
+    
+    nav a, nav p {
+        flex: unset;
+        margin: 5px 0;
+    }
+    
+    #profile-router {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-top: 10px;
+    }
+}
 
 </style>
