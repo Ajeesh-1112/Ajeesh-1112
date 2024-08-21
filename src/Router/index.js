@@ -8,6 +8,7 @@ import homepage from "@/components/Home/homepage.vue"
 import profile from "@/components/profile.vue"
 import Quiz from "@/components/Home/homeChildrens/Quiz.vue"
 import sidebar from "@/components/Home/homeChildrens/sidebar.vue"
+import Instruction from "@/components/Instruction.vue"
 const routes=[
     {
      path:"/",
@@ -55,6 +56,11 @@ const routes=[
       ]
 
     },
+    {
+      path:"/instruction",
+      name:"instruction",
+      component:Instruction
+    }
   
 ]
 

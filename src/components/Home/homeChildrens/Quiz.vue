@@ -1,6 +1,5 @@
 <template>
-    <div :class={isdark:darkvalue}>
-        <button @click="dark" id="dark">{{ btnValue }}</button>
+    <div id="container">
          <div>
            <h1>{{sidebarValue.toUpperCase()}}</h1>
          </div>
@@ -17,7 +16,7 @@
             <dd>{{val.description}} {{ sidebarValue}}.Take the test and chance to win the {{ val.name }} certificate .</dd>
             <dd>
                 <div id="button-container">
-                <button>Try It Yourself >></button>
+                <button @click="instruction">Try It Yourself >></button>
                 <button id="learn">Learn {{ sidebarValue }}</button>
             </div>
             </dd>
@@ -59,17 +58,10 @@ export default {
         }
     },
     methods:{
-        dark()
-        {
-            this.darkvalue=!this.darkvalue
-            if(this.btnValue==="Dark")
-        {
-            this.btnValue="Bright"
-        }
-        else{
-            this.btnValue="Dark"
-        }
-        }
+     instruction()
+     {
+          this.$router.push("/instruction")
+     }
 
     },
 
@@ -82,13 +74,18 @@ export default {
 }
 </script>
 <style scoped>
+#container
+{
+    display: flex;
+    flex-direction: column;
+}
 
 h1{
     width:fit-content;
    margin:0 auto;
    font-weight: 500;
    font-size: 2em;
-   margin-top:10px
+   margin-top:60px
 
 }
 dl{

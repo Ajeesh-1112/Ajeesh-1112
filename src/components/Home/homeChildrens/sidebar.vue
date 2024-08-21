@@ -50,12 +50,12 @@ export default {
     display: flex;
 }
 .main{
-    color:rgb(188, 188, 188);
+    margin-top:65px;
+    position: fixed;
     height:92vh;
     width:15%;
-    background-color: rgb(0, 0, 0,.85); 
-    /* background-color:rgba(3, 14, 30,.9); */
-    overflow: scroll;
+    background-color: white;
+    overflow-y: auto;
     flex:2
     
 
@@ -64,6 +64,7 @@ export default {
 {
     height: 100vh;
     flex:10;
+    margin-left:230px;
     color:black;
     
     padding:10px 20px;
@@ -83,7 +84,7 @@ h5
 a
 {
     display: block;
-    color:rgb(188, 188, 188);
+    color: rgb(74, 73, 73);
     text-decoration: none;
     padding: 8px;
    
@@ -91,12 +92,25 @@ a
 }
 a:hover
 {
-    background-color: rgb(9, 29, 143);
+    background-color: rgb(248, 246, 246);
+
 }
 a:focus
 {
+    color: blue;
+}
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color:rgb(201, 200, 200);
   
-    background-color: rgb(9, 29, 143);
 }
 
 </style>

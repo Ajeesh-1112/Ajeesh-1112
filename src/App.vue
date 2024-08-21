@@ -8,7 +8,7 @@
 <script>
 export default {
   components: {
-    // homepage 
+  
 
   } ,
   name: 'App',
@@ -22,7 +22,8 @@ export default {
 *
 {
   margin:0px;
-  font-family: Arial, Helvetica, sans-serif
+  font-family: Arial, Helvetica, sans-serif;
+  /* background-color:black; */
 }
 
 </style>

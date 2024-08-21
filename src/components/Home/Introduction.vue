@@ -32,14 +32,16 @@ export default{
 
 #main
 {
+    /* margin-top:100px; */
     padding-top:30px ;
     width:100%;
-    height: 90vh;
+    height: 100vh;
     background-color:whitesmoke;
 
 }
      h1,h3
      {
+        margin-top:90px;
         text-align: center;
      }
      #container

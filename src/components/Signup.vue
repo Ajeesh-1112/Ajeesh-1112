@@ -2,7 +2,7 @@
    <div id="signup-container">
       <form action="" @submit.prevent="formdata">
         <img src="@/assets/login3.png" alt="">
-             <h3>sign up</h3>
+             <h3>{{ signupheading }}</h3>
              <label for="">Name</label>
              <input type="text" v-model="username" required>
              <label for="">Email</label>
@@ -24,12 +24,12 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
 export default{
     name:"signup-vue",
     data()
     {
         return{
+            signupheading:"Signup",
             username:null,
             useremail:null,
             userpassword:null,
@@ -38,9 +38,7 @@ export default{
 
         }
     },
-    computed:{
-        ...mapState(["signupdetails"])
-    },
+
     methods:{
         formdata()
     {

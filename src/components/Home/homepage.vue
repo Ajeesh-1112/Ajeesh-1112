@@ -1,13 +1,13 @@
 <template>
-    <div>
+    <div >
      <nav>
         <P>@TESTIE</P>
         <router-link to="/home" :class="{Home:isHome}">Home</router-link>
         <router-link to="">Dashboard</router-link>
         <router-link to="/home/test" >Test</router-link>
         <form action="">
-            <input type="search">
-            <input type="submit" value="search">
+            <input type="search" placeholder="search">
+           
         </form>     
         <p @click="themeChange">{{ theme }}   </p>
           <router-link to="/home/profile" id="profile-router"><img src="@/assets/blueprofile.jpg" alt=""></router-link>
@@ -87,15 +87,17 @@ export default{
 <style scoped>
 
 
+
 #profile-router{
     position: absolute;
     top:10px;
-    right:6px
+    right:40px
 }
 a{
     position: relative;
-    color: white;
+    color: grey;
     text-decoration: none;
+   
 
 }
 img{
@@ -105,13 +107,13 @@ img{
 nav{
 
     color:white;
-    /* background-color:rgba(0, 29, 72, 0.9); */
-    background-color: rgba(0, 0, 0, 0.85); 
-    border-bottom:4px solid rgba(249, 249, 249, 0.2);
+    background-color: white ;
+    border-bottom:1px solid rgb(206, 206, 206);
     padding: 16px;
     display: flex;
     width:100%;
     justify-content: space-between;
+    position: fixed;
 }
 nav form{
     flex:4;
@@ -120,8 +122,10 @@ nav form{
 }
 nav p
 {
+    
+    color:blue;
+    font-weight: 600;
     flex:1;
-    /* color: rgb(8, 8, 128); */
 }
 nav a{
     flex:1.05
@@ -130,7 +134,7 @@ nav a{
 input[type="submit"]
 {
    
-    background-color: rgb(8, 8, 128);
+    background-color: rgb(3, 118, 175);
     padding: 5.5px 16px;
     color: white;
     border:none;
@@ -149,8 +153,8 @@ input[type="search"]
     font-size:1.02em;
     background-color:rgb(234, 233, 233);
     border: none;
-    padding:3px 10px 4px 6px;
-    border-radius: 10px 0px 0px 10px;
+    padding:6px 10px;
+    border-radius:4px
 }
 input[type="search"]:focus{
     outline: none;
@@ -180,7 +184,9 @@ input[type="search"]:focus{
 }
 a:hover,p:hover
 {
-    color:blue
+    color:blue;
+   
+   
 }
 a:focus,p:focus
 {

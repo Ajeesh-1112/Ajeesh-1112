@@ -26,7 +26,7 @@ const store=new vuex.Store({
       
              state.profileName=response.name
              state.profileEmail=response.email
-             console.log(state.profileEmail);
+            //  console.log(state.profileEmail);
              
     },
     changeSidebar(state,response)

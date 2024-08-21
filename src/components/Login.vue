@@ -23,9 +23,6 @@
 
 <script>
 import { mapState } from 'vuex';
-// import users from '@/user.json';
-
-
 export default{
     name:"login-vue",
 
@@ -60,8 +57,6 @@ export default{
 
                 })
                 this.$router.push("/home")
-                // console.log(users[0]);
-                
                 
               }
               else{
@@ -121,8 +116,8 @@ img{
     margin-top: 8px;
 }
 input[type="submit"]
-{
-    background-color: rgb(3, 118, 175);
+{background-color: rgb(3, 118, 175);
+    
     padding: 6px;
     color: white;
     border:none;

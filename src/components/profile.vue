@@ -54,20 +54,21 @@ img{
     position:absolute;
     width:100vw;
     height:100vh;
-    background-color: rgba(0, 0, 0,.3);
+  
     
     
     
 }
 .main div{
+    
     background-color: white;
     width:fit-content;
     display: flex;
     flex-direction: column;
     margin:0px auto;
     position: absolute;
-    right:8px;
-    top:6px;
+    right:-30px;
+    top:50px;
     padding: 6px 20px 40px 40px;
     border-radius: 10px;
     
