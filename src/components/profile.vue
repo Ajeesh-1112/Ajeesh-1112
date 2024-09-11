@@ -2,7 +2,8 @@
 <template>
     <div class="main">
         <div class="profile">
-            <router-link to="/home">X</router-link>
+            <!-- <router-link to="/home">X</router-link> -->
+            <button @click="cancel">x</button>
             <h3>User Details</h3>
              <img src="@/assets/profile.webp">
              <h5>User Name :</h5>
@@ -32,8 +33,11 @@ export default{
         {
            
             this.$router.push("/login")
-        }
-    }
+        },
+        cancel(){
+this.$router.go(-1)
+        }   
+     }
 
 }
 </script>

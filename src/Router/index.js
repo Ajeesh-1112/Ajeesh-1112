@@ -9,6 +9,8 @@ import profile from "@/components/profile.vue"
 import Quiz from "@/components/Home/homeChildrens/Quiz.vue"
 import sidebar from "@/components/Home/homeChildrens/sidebar.vue"
 import Instruction from "@/components/Instruction.vue"
+import Dashboard from "@/components/Home/homeChildrens/Dashboard.vue"
+import Aboutus from "@/components/Aboutus.vue"
 const routes=[
     {
      path:"/",
@@ -50,6 +52,22 @@ const routes=[
             }
           ]
         },
+        {
+         path:"/aboutus",
+         name:"aboutus",
+         components:
+         {
+         about:Aboutus
+         }
+        },
+        {
+          path:"dashboard",
+          name:"dashboard",
+          components:
+          {
+            Dashboard:Dashboard
+          }
+        }
        
     
         

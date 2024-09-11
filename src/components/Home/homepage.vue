@@ -3,7 +3,7 @@
      <nav>
         <P>@TESTIE</P>
         <router-link to="/home" :class="{Home:isHome}">Home</router-link>
-        <router-link to="">Dashboard</router-link>
+        <router-link to="/home/dashboard">Dashboard</router-link>
         <router-link to="/home/test" >Test</router-link>
         <form action="">
             <input type="search" placeholder="search">
@@ -15,10 +15,12 @@
      </nav>
      <router-view id="profile-router" />
         <router-view name="sidebar" />
-
+        <router-view name="Dashboard" id="dashboard-viewer"/>
     
 
      <Introduction v-if="show" />
+
+    <Aboutus v-if="showabout"/>
 
 
 
@@ -30,16 +32,20 @@
 <script>
 import { mapState } from 'vuex';
 import Introduction from './Introduction.vue';
+import Aboutus from '../Aboutus.vue';
 export default{
     name:"homePage",
     components:{
-                Introduction
+        Introduction,
+        Aboutus
+      
          
     },
     data()
     {
         return{
              show:true,
+             showabout:false,
              isHome:true,
              theme:"Dark"
         }
@@ -65,10 +71,17 @@ export default{
         if(to.path==="/home" || to.path==="/home/profile")
         {
             this.show=true
+            this.showabout=false
         
         }
+        else if(to.path === "/aboutus")
+        {
+            this.show=false
+           this.showabout=true
+        }
         else{
-            this.isHome=false
+            this.showabout=false
+                        this.isHome=false
             this.show=false
         }
             
@@ -89,9 +102,9 @@ export default{
 
 
 #profile-router{
-    position: absolute;
+    position:fixed;
     top:10px;
-    right:40px
+    right:20px
 }
 a{
     position: relative;
@@ -101,7 +114,7 @@ a{
 
 }
 img{
-    width:40px;
+    width:45px;
     border-radius: 50%;
 }
 nav{
@@ -191,6 +204,10 @@ a:hover,p:hover
 a:focus,p:focus
 {
     color:blue
+}
+#dashboard-viewer
+{
+    padding-top:90px;
 }
 
 @media only screen and (max-width: 768px) {

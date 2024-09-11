@@ -4,8 +4,8 @@
         <div id="container">
             <div id="welcome-msg">
                 <p>Test your language <br> level online and get <br> a certificate</p>
-                 <button id="learn">Learn More +</button>
-                 <button id="start" @click="test">Start Test ></button>
+                 <button id="learn" @click="aboutus">About Us </button>
+                 <button id="start" @click="test">Get Started ></button>
             </div>
             <div id="image-container">
                 <img src="@/assets/online.jpeg">
@@ -24,6 +24,10 @@ export default{
         test()
         {
             this.$router.push("/home/test")
+        },
+        aboutus()
+        {
+            this.$router.push("/aboutus")
         }
     }
 }
@@ -87,6 +91,11 @@ export default{
      #start
      {
         background-color: orangered;
+     }
+     #start:hover,#learn:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: .7s;
      }
 
 

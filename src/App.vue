@@ -2,6 +2,9 @@
  <div>  
   <!-- <homepage /> -->
     <router-view></router-view>
+    <div>
+      <router-view name="about"/>
+    </div>
  </div>
 </template>
 
